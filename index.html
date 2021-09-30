@@ -9,13 +9,32 @@
 </head>
 <body>
     <header>
-        <a href="" class="logo">📚&nbsp;&nbsp;MATEPEDIA</a>
+        <a href="" class="logo">&nbsp;&nbsp;Ookami Bot</a>
         <ul>
-            <li><a href="">Historia</a></li>
-            <li><a href="">Matemáticos</a></li>
-            <li><a href="">Datos Curiosos</a></li>
-            <li><a href="" class="active">Sobre</a></li>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Comandos</a></li>
+            <li><a href="">Discord Official</a></li>
+            <li><a href="" class="active">Creadores</a></li>
         </ul>
     </header>
+    <section>
+        <img src="Ranka Ookami Concepto.png" id="stars">
+        <a href="#sec" id="btn">¡¡Vamos!!</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY
+            stars.style.top = value * 0.25 + 'px';
+            moon.style.top = value * 1 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+        })
+    </script>
 </body>
 </html>
