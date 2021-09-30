@@ -11,6 +11,7 @@
     --color-casillas: #ff0000;
     --text-white: #fff;
     --text-black: #000;
+    --background-color: #ff00ff50;
 }
 body{
     overflow-x: hidden;
@@ -26,6 +27,8 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
+    background:var(--background-color);
+    backdrop-filter: blur(3px);
 }
 header .logo{
     color: var(--color-casillas);
