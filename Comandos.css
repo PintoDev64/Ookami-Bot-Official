@@ -87,24 +87,6 @@ header ul li a:hover, header ul li a.active{
     object-fit: cover;
     pointer-events: none;
 }
-.Btn-h {
-    position: absolute;
-    left: 10%;
-    top: 45%;
-    width: 30%;
-    height: 15%;
-}
-#btn{
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 30px;
-    background: var(--color-casillas);
-    color: var(--text-white);
-    font-size: 1.5em;
-    pointer-events: all;
-    border: none;
-    z-index: 9;
-}
 /*---------------------Contenido------------------*/
 .Content{
     position: absolute;
