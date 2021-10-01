@@ -13,6 +13,7 @@
     --text-black: #000;
     --background-color: #ff00ff50;
     --border-color: #0000ff;
+    --enfasis-color: #8400a5;
 }
 body{
     overflow-x: hidden;
@@ -23,13 +24,14 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    height: 10%;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
     background:var(--background-color);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
 }
 header .logo{
     color: var(--color-casillas);
@@ -59,40 +61,64 @@ header ul li a:hover, header ul li a.active{
     color: var(--text-white);
     transition: all 0.3s ease;
 }
+.main{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 .Btn{
     position:relative;
-    width: 100%;
+    width: 60%;
     height: 100vh;
     padding: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     background: var(--text-white);
 }
-.Btn::before{
+.main::before{
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, #1c0522,transparent);
+    background: linear-gradient(to top, var(--enfasis-color),transparent);
     z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 .Btn img{
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 100%;
+    height: 100%;
     z-index: 5;
     object-fit: cover;
     pointer-events: none;
+    opacity: 1;
 }
 .Btn-h {
-    position: absolute;
-    left: 10%;
-    top: 45%;
-    width: 30%;
-    height: 15%;
+    background: var(--text-white);
+    position: relative;
+    border-left: 3px solid var(--color-casillas);
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.Btn-h div{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+#text-btn{
+    margin-left: 20px;
+    font-size: 2.75em;
 }
 #btn{
     text-decoration: none;
@@ -101,6 +127,7 @@ header ul li a:hover, header ul li a.active{
     background: var(--color-casillas);
     color: var(--text-white);
     font-size: 1.5em;
+    margin-left: 20px;
     pointer-events: all;
     border: none;
     z-index: 9;
@@ -109,7 +136,7 @@ header ul li a:hover, header ul li a.active{
 .Content{
     position: absolute;
     padding: 100px;
-    background: #1c0522;
+    background: var(--enfasis-color);
     color: #fff;
     z-index: 6;
 }
