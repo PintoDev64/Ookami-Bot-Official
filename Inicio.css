@@ -57,7 +57,7 @@ header ul li a{
 }
 header ul li a:hover, header ul li a.active{
     border-right: 5px solid var(--color-casillas);
-    background: #ff000050;
+    background: #ff000075;
     color: var(--text-white);
     transition: all 0.3s ease;
 }
@@ -100,11 +100,20 @@ header ul li a:hover, header ul li a.active{
     object-fit: cover;
     pointer-events: none;
     opacity: 1;
+    transition: all 0.5s ease;
+}
+.Btn img.active{
+    transform: rotate(360deg);
+    transition: all 1s ease;
+}
+.Btn img.active2{
+    transform: rotate(-360deg);
+    transition: all 1s ease;
 }
 .Btn-h {
     background: var(--text-white);
     position: relative;
-    border-left: 3px solid var(--color-casillas);
+    border-left: 5px solid var(--color-casillas);
     text-align: center;
     width: 40%;
     height: 100%;
@@ -134,6 +143,8 @@ header ul li a:hover, header ul li a.active{
 }
 /*---------------------Contenido------------------*/
 .Content{
+    display: flex;
+    align-items: center;
     position: absolute;
     padding: 100px;
     background: var(--enfasis-color);
