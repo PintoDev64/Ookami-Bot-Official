@@ -25,7 +25,6 @@ let meter = 0;
     
     btn.addEventListener('click', function () {
         console.log("Button has been held down")
-        console.log('900px Lowered')
         window.scrollTo({
             top: 900,
             behavior: "smooth",
