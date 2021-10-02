@@ -13,6 +13,8 @@
     --text-black: #000;
     --background-color: #ff00ff50;
     --border-color: #0000ff;
+    --enfasis-color: #8400a5;
+    --enfasis-color-2: #8400a580;
 }
 body{
     overflow-x: hidden;
@@ -23,13 +25,14 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    height: 10%;
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10000;
     background:var(--background-color);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
 }
 header .logo{
     color: var(--color-casillas);
@@ -50,59 +53,185 @@ header ul li{
 }
 header ul li a{
     text-decoration: none;
+    font-size: 1.2em;
     padding: 6px 15px;
     color: var(--text-black);
+    transition: all 0.3s ease;
 }
 header ul li a:hover, header ul li a.active{
     border-right: 5px solid var(--color-casillas);
-    background: #ff000050;
+    background: #ff000075;
+    font-size: 1.5em;
     color: var(--text-white);
+    text-decoration: dashed;
     transition: all 0.3s ease;
+}
+header ul li a.select{
+    border-right: 5px solid var(--color-casillas);
+}
+.main{
+    background: var(--text-white);
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .Btn{
     position:relative;
-    width: 100%;
+    width: 60%;
     height: 100vh;
     padding: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     background: var(--text-white);
 }
-.Btn::before{
+.main::before{
     content: '';
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, #1c0522,transparent);
+    background: linear-gradient(to top, var(--enfasis-color),transparent);
     z-index: 1000;
+    display: flex;
+    align-items: center;
 }
 .Btn img{
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 100%;
+    height: 100%;
     z-index: 5;
     object-fit: cover;
     pointer-events: none;
+    opacity: 1;
+    transition: all 0.5s ease;
 }
 /*---------------------Contenido------------------*/
 .Content{
-    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
     padding: 100px;
-    background: #1c0522;
+    background: var(--enfasis-color);
     color: #fff;
     z-index: 6;
 }
-.Content h2{
+
+
+
+/*-------------------Footer----------------*/
+footer{
+    top: -5px;
     position: relative;
-    text-align: center;
-    font-size: 3.5em;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    border-top: 6px solid var(--background-color);
+    padding: 50px 100px;
+    background: #ff00ff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .container .sec2{
+    margin-right: 30px;
+}
+footer .container .sec2{
+    width: 40%;
     color: #fff;
 }
-.Content p{
-    font-size: 1.2em;
+footer .container .sec2 h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .container h2:before{
+    content: '';
+    position: relative;
+    bottom: -5px;
+    left: 0;
+    width: 103px;
+    border-radius: 10px;
+    height: 5px;
+    background: #451a8c;
+}
+footer p{
+    color: white;
+}
+.redes{
+    margin-top: 20px;
+    display: flex;
+}
+.redes li{
+    list-style: none;
+}
+.redes li a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.redes li a:hover{
+    background: var(--enfasis-color);
+}
+.redes li a .fab{
+    color: #fff;
+    font-size: 20px;
+}
+.contacto{
+    position: relative;
+    align-items: center;
+    color: #999;
+    width: 35%;
+    margin-right: 0 !important;
+}
+.contacto .info{
+    position: relative;
+    list-style: none;
+}
+.contacto .info li{
+    margin-bottom: 16px;
+}
+.contacto .info li span:nth-child(1){
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contacto .info li span{
+    color: #999;
+}
+.contacto .info li span a{
+    color: #fff;
+    text-decoration: none;
+}
+.contacto .info li span a:hover{
+    color: #fff;
+}
+.copyright{
+    border: 5px solid #999;
+    position: relative;
+    top: 30px;
+    width: 100%;
+    background: #181818;
+    padding: 8px 100px;
+    text-align: center;
     color: #fff;
 }

@@ -147,6 +147,9 @@ header ul li a:hover, header ul li a.active{
     border: none;
     z-index: 9;
 }
+header ul li a.select{
+    border-right: 5px solid var(--color-casillas);
+}
 /*---------------------Contenido------------------*/
 .Content{
     display: flex;
