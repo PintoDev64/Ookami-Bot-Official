@@ -16,6 +16,21 @@
     --enfasis-color: #8400a5;
     --enfasis-color-2: #8400a580;
 }
+/*-----------------------------------*/
+
+::-webkit-scrollbar {
+    height: 2px;
+    background: rgb(79, 79, 79);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    border: #585858;
+  }
+  
+  
+  /*-----------------------------------*/
 body{
     overflow-x: hidden;
     background: linear-gradient(#2b1055, #7579de);
