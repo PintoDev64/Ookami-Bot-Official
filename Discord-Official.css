@@ -186,48 +186,6 @@ header ul li a.select {
     border-right: 5px solid var(--color-casillas);
 }
 
-
-/*---------------------Contenido------------------*/
-
-.Content {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 100px;
-    background: var(--enfasis-color);
-    color: #fff;
-    z-index: 6;
-}
-
-.text {
-    text-align: center;
-    width: 40%;
-    margin: 5%;
-    transition: all 0.5s ease;
-}
-
-.text:hover {
-    background: linear-gradient(var(--enfasis-color-2), #7579de80);
-    border-bottom: 5px solid var(--color-casillas);
-    transition: all 0.5s ease;
-}
-
-.Content h2 {
-    margin: 5%;
-    position: relative;
-    text-align: center;
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.Content p {
-    margin: 5%;
-    font-size: 1.2em;
-    color: #fff;
-}
-
-
 /*-------------------Footer----------------*/
 
 footer {

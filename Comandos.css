@@ -157,6 +157,10 @@ header ul li a.select {
     border: none;
     z-index: 9;
 }
+#btn a{
+    text-decoration: none;
+    color: #fff;
+}
 .Btn img {
     position: absolute;
     top: 0;
